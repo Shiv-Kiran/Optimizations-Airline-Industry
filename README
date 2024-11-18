@@ -1,0 +1,33 @@
+
+=================================== DESCRIPTION OF CODE ===================================
+
+
+
+==> The solver.py file has functions that solve for the optimal solution, given the schedule, probabilities, costs as input.
+    This file acts as a helper file for the airport_simul.py file.
+
+==> airport_simul.py has the code to run each alogorithm, for 5 different schedules... in order to take an avergae cost.
+    Also it does the above for 4 different probability profiles,
+
+==> each probability profile has 4 probabilities, for 4 different capacity scenarious, which are fixed.
+    for example we have 4 capacity scenarious C1, C2, C3, C4, then a profile of P = [0.1, 0.2, 0.3, 0.4] means that
+    the probability of C1 is 0.1, C2 is 0.2, C3 is 0.3 and C4 is 0.4.
+
+==> You can change the line 105 in the code, to study the effect of chaange of the air delay cost per period.
+    By default, it is 750$/period
+
+==> And if you run airport_simul.py, it creates a file stats.pkl in the current folder. THis file has all the data recorded from all the experiments.
+
+==> Finally analyse.py analyses the stats.pkl file, computes averge costs, delays etc and creates all the plots shown in the report.
+
+
+
+
+================= CODE RUNNING INSTRUCTIONS ============================
+
+Need to have python installed.
+Need python packages: numpy, matplotlib, pickle, pulp
+
+python3 airport_simul.py
+python3 analyse.py
+
